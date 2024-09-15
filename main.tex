@@ -1,0 +1,95 @@
+\documentclass[man]{apa7}  % APA 7th edition
+\usepackage[spanish]{babel} % Spanish language support
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage[T1]{fontenc}    % Output font encoding
+\usepackage{csquotes}       % For proper quotes
+\usepackage{graphicx}       % For figures and images
+\usepackage{setspace}       % For controlling spacing
+\usepackage{apacite}        % APA citation style
+\usepackage{booktabs}       % Improved table formatting
+\usepackage{hyperref}       % For hyperlinks in text
+\usepackage{fancyhdr}       % For custom headers and footers
+
+% Define variables
+\newcommand{\myTitle}{APA 7 Paper Sample}
+\newcommand{\myAuthor}{Hesus Garcia Cobos}
+\newcommand{\myAffiliation}{Universidad Popular Autónoma de Puebla}
+\newcommand{\myCourse}{147-136-AYH602NE-701: Comunicación Y Escritura Académica}
+\newcommand{\myProfessor}{Dra. Gabriela Zenteno Ríos}
+\newcommand{\myDate}{15 de septiembre de 2024}
+
+% Page style to include page number at the top-right corner
+\fancypagestyle{fancyheader}{
+    \fancyhf{}  % Clear all header/footer settings
+    \fancyhead[R]{\thepage}  % Page number on the top-right corner
+    \renewcommand{\headrulewidth}{0pt}  % No header rule line
+}
+
+\begin{document}
+
+% Apply the custom page style to the title page
+\thispagestyle{fancyheader}  % Apply page numbering to the title page too
+
+% Title Page
+\vspace*{2in}
+\begin{center}
+    \textbf{\Large \myTitle} \\[24pt]
+    \myAuthor \\[12pt]
+    \myAffiliation \\[12pt]
+    \myCourse \\[12pt]
+    \myProfessor \\[12pt]
+    \myDate  % Due date
+\end{center}
+
+\newpage  % Start a new page for content
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}  % Page number on the top right
+
+\doublespacing  % Ensure double spacing for APA 7 compliance
+
+\section{Introducción}
+
+Este es el inicio de un documento apa 7.
+
+\subsection{Cita textual corta}
+
+Según Heredia (2024), "La pandemia y, más recientemente, el arribo de la inteligencia artificial a nuestros dispositivos móviles, han implicado un verdadero terremoto para la educación escolarizada" (p. 431).
+
+\subsection{Cita parafraseada}
+
+Heredia (2024) sostiene que la llegada de la inteligencia artificial y los desafíos sociales globales como el cambio climático requieren una reevaluación profunda del propósito de las escuelas, que ya no pueden limitarse a optimizar los aprendizajes cognitivos individuales, sino que deben enfocarse en funciones sociales esenciales para la convivencia humana (p. 445).
+
+\subsection{Cita larga}
+
+Chomsky (2011) afirma:
+
+\begin{quote}
+    Universities do not generate nearly enough funds to support themselves from tuition money alone: they’re parasitic institutions that need to be supported from the outside, and that means they’re dependent on wealthy alumni, on corporations, and on the government, which are groups with the same basic interests. Well, as long as the universities serve those interests, they’ll be funded. If they ever stop serving those interests, they’ll start to get in trouble. (p. 28)
+\end{quote}
+
+% Include the bibliography using BibTeX
+\bibliographystyle{apacite}  % Specify the citation style (APA style with apacite)
+\bibliography{references}    % Include the bibliography file (references.bib)
+
+
+\appendix
+
+\section{Análisis Comparativo de las Posturas de los Autores}\label{appendix}
+
+A continuación, se presenta una tabla comparativa resumida de las posturas de Heredia (2024) y Chomsky (2011) respecto a la educación.
+
+\begin{table}
+\centering
+\caption{Comparación Resumida de las Posturas de Heredia y Chomsky}
+\begin{tabular}{l p{6cm} p{6cm}}
+\toprule
+\textbf{Aspecto} & \textbf{Heredia (2024)} & \textbf{Chomsky (2011)} \\
+\midrule
+Propósito de la educación & Enfoque en funciones sociales esenciales para la convivencia humana. & La educación fomenta la obediencia y conformidad. \\
+Dependencia financiera & No abordado. & Las universidades son dependientes de élites y corporaciones. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
